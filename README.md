@@ -1,62 +1,34 @@
-# Desafio FullStack Aliare
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Quer fazer parte da transformação do campo ~~escrevendo~~ codando o futuro do agronegócio?
+## Getting Started
 
-Se deseja participar do nosso processo seletivo, siga as instruções deste desafio e execute os seguintes passos: 
+First, run the development server:
 
-* Nos mande sua resolução em um *pull request* neste repositório.
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-* Deixe a aplicação disponível publicamente em imagem docker em qualquer host. Na descrição do PR passe o link para que consigamos usar sua imagem.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-* Por último, **caso ainda não esteja cadastrado no processo seletivo**, envie um email para [leonardo.zoccoli@aliare.co](mailto:leonardo.zoccoli@aliare.co) com seu CV anexado e o link da aplicação (se já estiver no processo seletivo, não precisa);
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-  
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-# Sobre a Aliare
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-A [Aliare](https://www.aliare.co/) é a maior empresa TECH AGRO do Brasil. Somos a plataforma de cooperação do agronegócio, conectando pessoas, ferramentas e empresas para transformar tempo em produtividade. Existimos para que todos os agentes da cadeia produtiva tenham informações certas, no tempo certo.
+## Learn More
 
-Nascemos do legado de três grandes empresas: Siagri, Datacoper e BTG, movidas pelo desejo de transformar o agronegócio do futuro.
+To learn more about Next.js, take a look at the following resources:
 
-**Tudo que o agro precisa logo ali.**
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-# O desafio
+## Deploy on Vercel
 
-Crie um microsserviço em node capaz de aceitar solicitações RESTful que recebam como parâmetro o nome da cidade ou as coordenadas (*latitude e longitude*) e retorne uma sugestão de playlist (*apenas nomes da músicas*) de acordo com a temperatura atual.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-
-## Requisitos
-
-1. Se a temperatura (*celsius*) estiver acima de 30 graus, as músicas sugeridas serão para festas
-2. Caso a temperatura esteja entre 15 e 30 graus, sugira faixas de música pop
-3. Se estiver um pouco frio (entre 10 e 14 graus), sugira faixas de rock
-4. Caso contrário, se estiver frio lá fora, proponha músicas clássicas
-
-## Requisitos não funcionais
-
-- Como este serviço será um sucesso mundial, ele deve estar preparado para ser tolerante a falhas, responsivo e resiliente.
-
-- Use qualquer ferramenta e estrutura com as quais se sinta confortável e elabore brevemente sua solução, detalhes de arquitetura, escolha de padrões e estruturas.
-
-- Além disso, facilite a implantação/execução de seus serviços localmente (*considere usar alguma solução de container/VM para isso*). 
-
-## Dicas
-
-Você pode usar a API do *[OpenWeatherMaps](https://openweathermap.org)* para buscar dados de temperatura e o *[Spotify](https://developer.spotify.com/)* para sugerir as músicas da playlist.
-
-
-## Recomendações
-
-* Utilize NodeJs;
-* Utilize docker;
-* Utilize boas práticas de codificação, isso será avaliado;
-* Mostre que você manja dos paranauê do React;
-* Código limpo, organizado e documentado (quando necessário);
-* Use e abuse de:
-  * SOLID;
-  * Criatividade;
-  * Performance;
-  * Manutenabilidade;
-  * Testes Unitários (quando necessário)
-  * ... pois avaliaremos tudo isso!
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

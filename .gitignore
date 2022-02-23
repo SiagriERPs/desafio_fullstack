@@ -103,3 +103,4 @@ dist
 # TernJS port file
 .tern-port
 back-end/yarn.lock
+yarn.lock

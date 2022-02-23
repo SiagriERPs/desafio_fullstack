@@ -1,31 +1,27 @@
 {
-  "name": "backend-api-tempo",
-  "version": "1.0.0",
-  "description": "jarder silva",
-  "main": "index.js",
+  "name": "desafio-full-stack",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "heroku": "node src/index.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jardersilva/desafio_api_tempo.git"
-  },
-  "author": "@jardersilva",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jardersilva/desafio_api_tempo/issues"
-  },
-  "homepage": "https://github.com/jardersilva/desafio_api_tempo#readme",
   "dependencies": {
+    "@emotion/react": "^11.8.1",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.4.2",
+    "@mui/material": "^5.4.3",
+    "@mui/styled-engine-sc": "^5.4.2",
     "axios": "^0.26.0",
-    "cors": "^2.8.5",
     "dotenv": "^16.0.0",
-    "express": "^4.17.3"
+    "next": "12.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "eslint": "8.9.0",
+    "eslint-config-next": "12.1.0"
   }
 }

@@ -6,7 +6,7 @@ module.exports = {
     var token = await process.env.KEY_WEATHER;
     var options = {
       method: "GET",
-      url: `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lgn}&appid=${token}`,
+      url: `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lgn}&appid=51266135197fe4696715a36a64707393`,
     };
 
     var Exit;
@@ -14,11 +14,11 @@ module.exports = {
     await axios
       .request(options)
       .then(function (response) {
-        console.log("Erro: ", response.data);
+        //console.log("Erro: ", response.data);
         Exit = { status: true, temp: response.data.main.temp };
       })
       .catch(function (error) {
-        console.log("Erro: ", error);
+        //console.log("Erro: ", error);
         Exit = { status: false };
       });
 
@@ -36,7 +36,7 @@ module.exports = {
     await axios
       .request(options)
       .then(function (response) {
-        console.log("Erro: ", response.data);
+        //console.log("Erro: ", response.data);
         Exit = { status: true, temp: response.data.main.temp };
       })
       .catch(function (error) {
