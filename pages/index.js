@@ -21,6 +21,7 @@ export default function Home() {
   const [isErro, setErro] = useState(false);
   const [musics, setMusics] = useState([]);
   const [text, setText] = useState("");
+  const [temp, setTemp] = useState(-1);
 
   const scrollRef = useRef(null);
 
@@ -51,7 +52,8 @@ export default function Home() {
         setMusics(resposta.data.musics);
         setLoading(false);
         setErro(false);
-      } else if (resposta.status === 401) {
+        setTemp(resposta.data.temperatura);
+      } else if (resposta.status === 203) {
         alert("Cidade não localizada");
         setLoading(false);
         setErro(false);
@@ -73,7 +75,7 @@ export default function Home() {
         text={text}
         changeText={handleChange}
         onSearch={onSearch}
-        placeholder="Pesquisa (Ex:. São paulo)"
+        placeholder="Pesquisa (Ex:. Manaus)"
         frase="Informe o nome de sua cidade e retornaremos uma playlist com base na
         temperatura da sua região"
       />
@@ -85,14 +87,29 @@ export default function Home() {
   function result() {
     return (
       <Container>
-        <Stack spacing={1}>
+        <Stack
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
           <Typography
             style={style.text}
             variant="subtitle1"
             gutterBottom
             component="div"
           >
-            Resultado(s) ({musics.length})
+            Resultado ({musics.length})
+          </Typography>
+          <Typography
+            style={style.text}
+            variant="subtitle1"
+            gutterBottom
+            component="div"
+          >
+            Temperatura {temp.toFixed(1)}°
           </Typography>
         </Stack>
         <div style={style.navigation}>
