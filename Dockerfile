@@ -1,17 +1,21 @@
-FROM node:16.13.2-alpine
+FROM node:alpine
 
-WORKDIR /home/app
+RUN mkdir -p /usr/src/app
+ENV PORT 3000
 
-COPY package*.json ./
+WORKDIR /usr/src/app
 
-RUN npm install
+COPY package.json /usr/src/app
+COPY yarn.lock /usr/src/app
 
-COPY . .
+# Production use node instead of root
+# USER node
 
-COPY --chown=node:node . .
+RUN yarn install --production
 
-USER node 
+COPY . /usr/src/app
+
+RUN yarn build
 
 EXPOSE 3000
-
-CMD ["next", "start"]
+CMD [ "yarn", "start" ]

@@ -12,6 +12,8 @@ export default async function handler(req, res) {
     var tempo = await get_tempo.get_coodinate(lat, lgn);
   }
 
+  console.log("dd", tempo.temp);
+
   var temperatura = tempo.temp - 273.15;
   if (tempo.status) {
     var list_music = {};
@@ -39,7 +41,7 @@ export default async function handler(req, res) {
     }
   } else {
     res
-      .status(400)
+      .status(401)
       .json({ erro: true, message: "Erro na consulta da temperatura" });
   }
 }

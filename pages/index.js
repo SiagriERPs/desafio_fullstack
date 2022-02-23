@@ -51,6 +51,10 @@ export default function Home() {
         setMusics(resposta.data.musics);
         setLoading(false);
         setErro(false);
+      } else if (resposta.status === 401) {
+        alert("Cidade não localizada");
+        setLoading(false);
+        setErro(false);
       } else {
         setLoading(false);
         setErro(true);

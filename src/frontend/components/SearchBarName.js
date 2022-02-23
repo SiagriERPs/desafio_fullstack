@@ -19,7 +19,6 @@ export function SearchBar(props) {
           {props.frase}
         </Typography>
         <Paper
-          component="form"
           sx={{
             p: "2px 4px",
             display: "flex",
@@ -32,6 +31,11 @@ export function SearchBar(props) {
             value={props.text}
             onChange={props.changeText}
             inputProps={{ "aria-label": "" }}
+            onKeyPress={(event) => {
+              if (event.key === "Enter") {
+                props.onSearch;
+              }
+            }}
           />
           <IconButton
             sx={{ p: "10px" }}
